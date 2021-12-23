@@ -10,4 +10,4 @@ jobs:
       - run: cd build
       - run: cmake ${{ github.workspace }}
       - run: cmake --build .
-      - run: ./cmake-build-debug/SettingUpGoogleTest.exe
+      - run: .SettingUpGoogleTest.exe
