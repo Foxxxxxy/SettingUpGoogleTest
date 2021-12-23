@@ -8,6 +8,6 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: mkdir build 
       - run: cd build
-      - run: cmake ${{ github.workspace }}/CMakeLists.txt
+      - run: cmake ${{ github.workspace }}
       - run: cmake --build .
       - run: ./cmake-build-debug/SettingUpGoogleTest.exe
