@@ -26,8 +26,8 @@ TEST_F(StackTest, pop_test) {
 TEST_F(StackTest, clear_stack) {
     stack->clear_stack();
     EXPECT_EQ("success", stack->stack_testing("clear_stack", -1));
-    stack->push(11);
-    EXPECT_EQ("success", stack->stack_testing("clear_stack", -1));
+//    stack->push(11);
+//    EXPECT_EQ("success", stack->stack_testing("clear_stack", -1));
 }
 
 
@@ -38,7 +38,10 @@ TEST_F(StackTest, push_test) {
     }
 }
 
-
+TEST_F (StackTest, empty_test) {
+    stack->clear_stack();
+    EXPECT_EQ("success", stack->stack_testing("is_empty", -1));
+}
 
 int main(int argc, char* argv[]) {
     testing::InitGoogleTest(&argc, argv);

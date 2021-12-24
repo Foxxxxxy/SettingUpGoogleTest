@@ -37,6 +37,12 @@ void Stack::clear_stack () {
     stack = nullptr;
 }
 
+int Stack::is_empty () {
+    if (stack == nullptr)
+        return 1;
+    else
+        return 0;
+}
 
 string Stack::stack_testing (string command, int param) {
     if (command == "pop") {
@@ -57,6 +63,11 @@ string Stack::stack_testing (string command, int param) {
             return "error";
     } else if (command == "clear_stack") {
         if (stack == nullptr && size == 0)
+            return "success";
+        else
+            return "error";
+    } else if (command == "is_empty") {
+        if (stack == nullptr)
             return "success";
         else
             return "error";

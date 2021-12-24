@@ -14,6 +14,7 @@ public:
     void push(int val);
     int pop();
     void clear_stack();
+    int is_empty();
     std::string stack_testing (std::string command, int param);
 };
 
