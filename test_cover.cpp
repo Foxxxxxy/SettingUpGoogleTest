@@ -19,11 +19,15 @@ TEST_F(StackTest, pop_test) {
     stack->push(8);
     stack->push(9);
     EXPECT_EQ("success", stack->stack_testing("pop", -1));
+    EXPECT_EQ("success", stack->stack_testing("pop", -1));
+    EXPECT_EQ("success", stack->stack_testing("pop", -1));
 }
 
 TEST_F(StackTest, clear_stack) {
     stack->clear_stack();
     EXPECT_EQ("success", stack->stack_testing("clear_stack", -1));
+//    stack->push(11);
+//    EXPECT_EQ("success", stack->stack_testing("clear_stack", -1));
 }
 
 
@@ -33,6 +37,7 @@ TEST_F(StackTest, push_test) {
         EXPECT_EQ("success", stack->stack_testing("push", i));
     }
 }
+
 
 
 int main(int argc, char* argv[]) {
